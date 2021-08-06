@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://WebService/" xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="EnviarCorreoSMTP" type="tns:EnviarCorreoSMTP"/>
+
+  <xs:element name="EnviarCorreoSMTPResponse" type="tns:EnviarCorreoSMTPResponse"/>
+
+  <xs:element name="validEmail" type="tns:validEmail"/>
+
+  <xs:element name="validEmailResponse" type="tns:validEmailResponse"/>
+
+  <xs:element name="validEmails" type="tns:validEmails"/>
+
+  <xs:element name="validEmailsResponse" type="tns:validEmailsResponse"/>
+
+  <xs:complexType name="EnviarCorreoSMTP">
+    <xs:sequence>
+      <xs:element name="Remitente" type="xs:string" minOccurs="0"/>
+      <xs:element name="Clave" type="xs:string" minOccurs="0"/>
+      <xs:element name="Para" type="xs:string" minOccurs="0"/>
+      <xs:element name="Copia" type="xs:string" minOccurs="0"/>
+      <xs:element name="Asunto" type="xs:string" minOccurs="0"/>
+      <xs:element name="Mensaje" type="xs:string" minOccurs="0"/>
+      <xs:element name="Servidor" type="xs:string" minOccurs="0"/>
+      <xs:element name="Puerto" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EnviarCorreoSMTPResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validEmail">
+    <xs:sequence>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validEmailResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validEmails">
+    <xs:sequence>
+      <xs:element name="emails" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validEmailsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
